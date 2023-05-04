@@ -11,7 +11,9 @@ jobs:
           python-version: '3.9'
           cache: 'pip' # caching pip dependencies
       - run: pip install -r requirements.txt
-      - name: Check typing
-        run: mypy
+      - name: Check typing source
+        run: mypy srs
+      - name: Check typing tests
+        run: mypy tests
       - name: Start test
         run: pytest
