@@ -15,4 +15,4 @@ def test_minus():
 
 def test_divide():
     assert divide(5, 5) == 1, 'Invalid result'
-    assert divide(12, 6) == 3, 'Invalid result'
+    assert divide(12, 6) == 2, 'Invalid result'
