@@ -12,7 +12,7 @@ jobs:
           cache: 'pip' # caching pip dependencies
       - run: pip install -r requirements.txt
       - name: Check typing source
-        run: mypy srs
+        run: mypy src
       - name: Check typing tests
         run: mypy tests
       - name: Start test
