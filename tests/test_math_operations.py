@@ -1,15 +1,23 @@
+import allure
+
 from time import sleep
+
 
 from src.math_operations import sum, minus, divide
 
 
+@allure.suite('Test sum')
+@allure.description("Testing sum")
 def test_sum():
-    sleep(5)
-    assert sum(5, 5) == 10, 'Invalid result'
-    sleep(5)
-    assert sum(5, 6) == 11, 'Invalid result'
-    sleep(5)
-    assert sum(4, -5) == -1, 'Invalid result'
+    with allure.step('Testing sum of 5 and 5 equals 11'):
+        sleep(5)
+        assert sum(5, 5) == 10, 'Invalid result'
+    with allure.step('Testing sum of 5 and 5 equals 11'):
+        sleep(5)
+        assert sum(5, 6) == 11, 'Invalid result'
+    with allure.step('Testing sum of 5 and 5 equals 11'):
+        sleep(5)
+        assert sum(4, -5) == -1, 'Invalid result'
 
 
 def test_minus():
